@@ -10,7 +10,7 @@ public class User {
     User(String userID, String userName) {
         this.userID = userID;
         this.userName = userName;
-        userExpenseBalanceSheet = new UserExpenseBalanceSheet();
+        this.userExpenseBalanceSheet = new UserExpenseBalanceSheet();
     }
 
     public String getUserID() {
