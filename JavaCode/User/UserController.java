@@ -14,6 +14,11 @@ public class UserController {
         this.mappedUserList.put(user.getUserID(), user);
     }
 
+    public void createUser(String userID, String userName) {
+        User user = new User(userID, userName);
+        addUser(user);
+    }
+
     public User getUser(String userID) {
         return this.mappedUserList.get(userID);
     }
