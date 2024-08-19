@@ -8,7 +8,7 @@ import java.util.List;
 public class UserExpenseBalanceSheetController {
     public void updateUserExpense(User user, List<Split> splitDetails, double amount) {
         UserExpenseBalanceSheet userExpenseSheetObject = user.getUserExpenseBalanceSheet();
-        userExpenseSheetObject.setTotalExpense(userExpenseSheetObject.getTotalPaymentDone() + amount);
+        userExpenseSheetObject.setTotalPaymentDone(userExpenseSheetObject.getTotalPaymentDone() + amount);
 
         for (Split split : splitDetails) {
             // splitUser : is one of the user present in split
