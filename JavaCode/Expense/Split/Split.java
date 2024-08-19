@@ -14,13 +14,13 @@ public class Split {
     int percentageSpilt;
     
     // Constructor to create instance of Split based on amount owed by user in actual currency
-    Split(double amount, User user) {
+    public Split(double amount, User user) {
         this.amountOwe = amount;
         this.user = user;
     }
 
     // Constructor to create instance of Split based on amount owed by user in percentage
-    Split(int percentageSpilt, User user) {
+    public Split(int percentageSpilt, User user) {
         this.percentageSpilt = percentageSpilt;
         this.user = user;
     }

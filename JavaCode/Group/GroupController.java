@@ -7,7 +7,7 @@ import JavaCode.User.User;
 public class GroupController {
     Map<String, Group> mappedGroupList;
 
-    GroupController() {
+    public GroupController() {
         this.mappedGroupList = new HashMap<>();
     }
 

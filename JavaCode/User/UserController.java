@@ -6,7 +6,7 @@ import java.util.stream.*;
 public class UserController {
     Map<String, User> mappedUserList;
 
-    UserController() {
+    public UserController() {
         this.mappedUserList = new HashMap<>();
     }
 

@@ -7,7 +7,7 @@ public class User {
     String userName;
     UserExpenseBalanceSheet userExpenseBalanceSheet;
     
-    User(String userID, String userName) {
+    public User(String userID, String userName) {
         this.userID = userID;
         this.userName = userName;
         this.userExpenseBalanceSheet = new UserExpenseBalanceSheet();

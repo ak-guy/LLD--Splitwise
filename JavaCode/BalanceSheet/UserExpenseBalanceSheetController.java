@@ -29,14 +29,14 @@ public class UserExpenseBalanceSheetController {
                     splitUserBalance = new Balance();
                     userExpenseSheetObject.getUserBalance().put(splitUser.getUserID(), splitUserBalance);
                 }
-                splitUserBalance.setToGive(splitUserBalance.getToGive() + amount);
+                splitUserBalance.setToGive(splitUserBalance.getToGive() + amountOwe);
 
                 // updating split user's balance sheet object
-                splitUserExpenseSheetObject.setTotalExpense(splitUserExpenseSheetObject.getTotalExpense() + amount);
-                splitUserExpenseSheetObject.setTotalAmountOwed(splitUserExpenseSheetObject.getTotalAmountOwed() + amount);
+                splitUserExpenseSheetObject.setTotalExpense(splitUserExpenseSheetObject.getTotalExpense() + amountOwe);
+                splitUserExpenseSheetObject.setTotalAmountOwed(splitUserExpenseSheetObject.getTotalAmountOwed() + amountOwe);
                 
 
-                // getting the balance object of User to update its toGive parameter
+                // getting the balance object of User to update its toReceive parameter
                 Balance userBalance;
                 if (splitUserExpenseSheetObject.getUserBalance().containsKey(user.getUserID())) {
                     userBalance = splitUserExpenseSheetObject.getUserBalance().get(user.getUserID());
@@ -44,14 +44,14 @@ public class UserExpenseBalanceSheetController {
                     userBalance = new Balance();
                     splitUserExpenseSheetObject.getUserBalance().put(user.getUserID(), userBalance);
                 }
-                userBalance.setToGive((userBalance.getToGive() + amount));
+                userBalance.setToReceive((userBalance.getToReceive() + amountOwe));
             }
         }
         
 
     }
 
-    public static void getUserBalanceSheet(User user) {
+    public void getUserBalanceSheet(User user) {
         System.out.println("-----------------------------------------------");
         System.out.println("Balance Sheet of user : " + user.getUserName());
 
