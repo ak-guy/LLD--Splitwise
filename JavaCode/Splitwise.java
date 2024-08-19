@@ -32,18 +32,18 @@ public class Splitwise {
 
         // expense 1
         List<Split> splitDetails = new ArrayList<>();
-        Split s1 = new Split(200, userController.getUser("U0001"));
-        Split s2 = new Split(200, userController.getUser("U0002"));
-        Split s3 = new Split(300, userController.getUser("U0003"));
+        Split s1 = new Split(200.0, userController.getUser("U0001"));
+        Split s2 = new Split(200.0, userController.getUser("U0002"));
+        Split s3 = new Split(300.0, userController.getUser("U0003"));
         splitDetails.add(s1);
         splitDetails.add(s2);
         splitDetails.add(s3);
         group.addExpense("E0001", "Juices", userController.getUser("U0001"), 700, ExpenseSplitType.UNEQUAL, splitDetails);
         // expense 2
         List<Split> splitDetails2 = new ArrayList<>();
-        Split sd1 = new Split(200, userController.getUser("U0001"));
-        Split sd2 = new Split(200, userController.getUser("U0002"));
-        Split sd3 = new Split(200, userController.getUser("U0003"));
+        Split sd1 = new Split(200.0, userController.getUser("U0001"));
+        Split sd2 = new Split(200.0, userController.getUser("U0002"));
+        Split sd3 = new Split(200.0, userController.getUser("U0003"));
         splitDetails2.add(sd1);
         splitDetails2.add(sd2);
         splitDetails2.add(sd3);
